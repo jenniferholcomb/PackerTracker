@@ -29,8 +29,8 @@
 * Clone this repo to your workspace.
 * Navigate to the top level of the directory.
 * Navigate to program directory ``` $ cd ProjectName ```
-* Build the project with ``` $ dotnet build ```
-* Run the project with ``` $ dotnet run ```
+* To build & run program in development mode ``` $ dotnet run ```
+* To build & run program in production mode ``` dotnet run --launch-profile "production" ```
 
 ## Known Bugs
 
