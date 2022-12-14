@@ -10,5 +10,18 @@
       crossorigin="anonymous">
   </head>
   <body>
+    @using PlacesBeen.Models;
+
+    <h1>Places You've Been</h1>  
+    @if (Model.Count == 0)
+    {
+      <p>There are no destinations added to your list.</p>
+    }
+    <ul>
+      @foreach (Place place in Model)
+      {
+        <li>@Model.Location</li>
+      }
+    </ul>
   </body>
 </html>
