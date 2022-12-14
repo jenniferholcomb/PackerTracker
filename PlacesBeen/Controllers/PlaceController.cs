@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using PlacesBeen.Models;
 
 namespace PlacesBeen.Controllers
@@ -15,16 +16,24 @@ namespace PlacesBeen.Controllers
     }
     
     [HttpPost("/place")]
-    public ActionResult Create(string location)
+    public ActionResult Create(string location, string companion, string dates, string journal, string image)
     {
-      Place newPlace = new Place(location);
+      Place newPlace = new Place(location, companion, dates, journal, image);
       return RedirectToAction("Index");
     }
 
     [HttpGet("/place")]
     public ActionResult Index()
     {
-      return View();
+      List<Place> allPlaces = Place.GetAll();
+      return View(allPlaces);
+    }
+
+    [HttpGet("place/{id}")]
+    public ActionResult Show(int id)
+    {
+      Place foundPlace = Place.Find(id);
+      return View(foundPlace);
     }
 
   }

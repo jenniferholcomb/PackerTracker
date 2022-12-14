@@ -20,8 +20,9 @@
     <ul>
       @foreach (Place place in Model)
       {
-        <li>@Model.Location</li>
+        <li><a href="/place/@place.Id"><img src="@place.Image" alt="User photo of @place.Location" width="150px"> <br>@place.Location</a></li>
       }
+    <p><a href="/place/new">Add a new travel entry!</a></p>
     </ul>
   </body>
 </html>

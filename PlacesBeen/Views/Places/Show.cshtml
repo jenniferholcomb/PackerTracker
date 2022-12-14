@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project Name</title>
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Travel Destination Details</h1>
+    <h2>@Model.Location</h2> 
+    <img src="@Model.Image" alt="User photo of @Model.Location">
+    <p>Travel Companion: @Model.Companion</p>
+    <p>Dates Traveled: @Model.Dates</p>
+    <p>Journal: @Model.Journal</p>
+    <p><a href="/place">Back to Entries</a></p>
+  </body>
+</html>
