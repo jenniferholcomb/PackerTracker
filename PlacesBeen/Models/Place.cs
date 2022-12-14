@@ -1,6 +1,6 @@
-namespace ProjectName.Models
+namespace PlacesBeen.Models
 {
-  public class ClassName
+  public class Place
   {
     // properties, constructors, methods, etc. go here
   }

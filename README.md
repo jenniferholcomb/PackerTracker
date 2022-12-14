@@ -1,17 +1,27 @@
-# ProjectName
+# Places You've Been
 
-#### By Kirsten Opstad 
+#### By Kirsten Opstad & Jen Holcomb
 
-#### A short description of ProjectName
+#### An online travel diary
 
 ## Technologies Used
 
 * C#
 * .Net 6
+* MSTest
+* ASP.Net Core 6 MVC
 
 ## Description
 
 ### Objectives (MVP)
+
+Make a website where you can enter places you've been to create an online travel diary.
+
+* A place should be represented by a Place class. Begin by giving it the property cityName.
+
+* After testing all model logic and developing controllers and views this application, expand your Place model to include relevant properties like picture(s), how long you stayed, whom you travelled with, a journal entry, and so on. Integrate these into your controllers and views.
+
+* At the very least, this app should include RESTful Index, New, Create, and Show routes for the Place class.
 
 <!-- [x] Screenshots
 
@@ -28,7 +38,7 @@
 
 * Clone this repo to your workspace.
 * Navigate to the top level of the directory.
-* Navigate to program directory ``` $ cd ProjectName ```
+* Navigate to program directory ``` $ cd PlacesBeen ```
 * To build & run program in development mode ``` $ dotnet run ```
 * To build & run program in production mode ``` dotnet run --launch-profile "production" ```
 

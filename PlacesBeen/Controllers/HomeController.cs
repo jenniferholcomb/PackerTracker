@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-// using ProjectName.Models;
+using PlacesBeen.Models;
 
-namespace ProjectName.Controllers
+namespace PlacesBeen.Controllers
 {
   public class HomeController : Controllers
   {
