@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Project Name</title>
+    <title>Packer Tracker</title>
     <link 
       rel="stylesheet" 
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
@@ -10,19 +10,20 @@
       crossorigin="anonymous">
   </head>
   <body>
-    @using PlacesBeen.Models;
+    @using PackerTracker.Models;
 
-    <h1>Places You've Been</h1>  
+    <h1>Packing List</h1>  
     @if (Model.Count == 0)
     {
-      <p>There are no destinations added to your list.</p>
+      <p>There are no items added to your list.</p>
     }
     <ul>
-      @foreach (Place place in Model)
+      @foreach (Item item in Model)
       {
-        <li><a href="/place/@place.Id"><img src="@place.Image" alt="User photo of @place.Location" width="150px"> <br>@place.Location</a></li>
+        <li><a href="/item/@item.Id">@item.Description<a></li>
       }
-    <p><a href="/place/new">Add a new travel entry!</a></p>
+    <p><a href="/item/new">Add a new item!</a></p>
+    <p><a href="/item/check">Check off packed items!<a></p>
     </ul>
   </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Packer Tracker</title>
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+      crossorigin="anonymous">
+  </head>
+  <body>
+    @using PackerTracker.Models;
+
+    <h1>Check Packing List</h1>  
+    @if (Model.Count == 0)
+    {
+      <p>There are no items added to your list.</p>
+    }
+    <ul>
+    <form action="/item" method="post">
+      @foreach (Item item in Model)
+      {
+        <li><a href="/item/@item.Id">@item.Description<a></li>
+        <li>
+          <label for="packed">Packed?</label>
+          <input id="packed" name="packed" type="checkbox">
+        </li>
+      }
+    </form>
+    <button type="submit">Submit</button>
+
+    </ul>
+  </body>
+</html>

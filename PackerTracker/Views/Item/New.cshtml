@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Project Name</title>
+    <title>Packer Tracker</title>
     <link 
       rel="stylesheet" 
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
@@ -10,7 +10,10 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Places you've been!</h1>
-    <a href="/place/new">Add a new entry</a>
+    <form action="/item" method="post">
+      <label for="description">Add an item</label>
+      <input id="description" name="description" type="text">
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
