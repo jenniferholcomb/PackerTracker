@@ -10,9 +10,12 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Travel Destination Details</h1>
-    <h2>@Model.Description</h2> 
-    <p><a href="/item/@Model.Id/edit">Edit</a></p>
-    <p><a href="/item">Back to Entries</a></p>
+    <h1>Edit Item</h1>  
+    <form action="item/@Model.Id" method="post">
+      <label for="description">Update Description</label>
+      <input id="description" name="description" type="text" placeholder="@Model.Description">
+      <button type="submit">Update</button>
+    </form>
+    </ul>
   </body>
 </html>

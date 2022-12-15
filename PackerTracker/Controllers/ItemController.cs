@@ -42,5 +42,20 @@ namespace PackerTracker.Controllers
       List<Item> allItems = Item.GetAll();
       return View(allItems);
     }
+
+    [HttpGet("item/{id}/edit")]
+    public ActionResult Edit(int id)
+    {
+      Item foundItem = Item.Find(id);
+      return View(foundItem);
+    }
+
+    [HttpPost("item/{id}")]
+    public ActionResult Update(int id, string description)
+    {
+      Item foundItem = Item.Find(id);
+      foundItem.Description = description;
+      return RedirectToAction("Index");
+    }
   }
 }
